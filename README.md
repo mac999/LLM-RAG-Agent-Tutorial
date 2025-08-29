@@ -3,6 +3,7 @@ This repository contains [Syllabus](https://github.com/mac999/LLM-RAG-Agent-Tuto
 - [Syllabus](https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/1-1.prepare/syllabus-llm-rag-agent.docx)
 If you need AI deep learning foundation, refer the below link.
 - [AI foundation and tutorial with code](https://github.com/mac999/AI_foundation_tutorial): This repository contains materials for an AI Foundation seminar, covering fundamental concepts of AI, Machine Learning, Deep Learning, Natural Language Processing, Transformers, and Large Language Models (LLMs), including agent-based approaches and related services. It is designed to provide hands-on experience, primarily utilizing Jupyter Notebooks.
+- [Computer Vision with Deep Learning](https://github.com/mac999/computer_vision_deeplearning): This course goes beyond simply running pre-existing code. The core objective is to foster a deep understanding by having you implement the internal mechanisms of key deep learning models—such as CNN, ResNet, R-CNN, and YOLO—from the ground up. With hands-on exercises in PyTorch and Keras, you will gain proficiency in translating complex theories into functional code.
 
 In reference, the subjects are like below. 
 - [Transformer encoder and decoder tutoring](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/1-2.transformer). [Transformer scratch source code](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/2-3.deep-tranformer)
