@@ -184,3 +184,11 @@ This repository is licensed under the MIT License. You are free to use, modify, 
 
 # Author
 laputa99999@gmail.com
+
+# Collaboration & Research
+
+This repository is part of my ongoing work on AI, LLMs, and Transformer-based architectures.
+I am open to research collaboration, academic exchange, and joint projects with universities, public institutions, company and research labs.
+
+For collaboration inquiries, please feel free to reach out:
+📧 [laputa99999@gmail.com] | 🌐 [[LinkedIn or Personal Website](https://www.linkedin.com/feed/)]
