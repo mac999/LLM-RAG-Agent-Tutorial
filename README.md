@@ -179,12 +179,6 @@ If you're interested in Arduino based generative AI, refer to the below.
 - Mustafa Degerli, Bilkent University, 2014, Software Processes and Software Development Process Models
 - [NVIDIA cuda programming, open source and AI](https://www.slideshare.net/slideshow/nvidia-cuda-programming-open-source-and-ai/270372806?from_search=6)
 
-# License
-This repository is licensed under the MIT License. You are free to use, modify, and distribute the code for personal or commercial projects.
-
-# Author
-laputa99999@gmail.com
-
 # Collaboration & Research
 
 This repository is part of my ongoing work on AI, LLMs, and Transformer-based architectures.
@@ -192,3 +186,9 @@ I am open to research collaboration, academic exchange, and joint projects with 
 
 For collaboration inquiries, please feel free to reach out:
 📧 [laputa99999@gmail.com] | 🌐 [[LinkedIn or Personal Website](https://www.linkedin.com/feed/)]
+
+# License
+This repository is licensed under the MIT License. You are free to use, modify, and distribute the code for personal or commercial projects.
+
+# Author
+laputa99999@gmail.com
