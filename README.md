@@ -39,7 +39,7 @@ Second, check [syllabus](https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/m
 </br>
 Before running the example code, ensure you have Colab Pro, Python 3.10 or higher installed. Some tool or library use NVIDIA GPU, so if you want to use it, prepare notebook computer with NVIDIA GPU(recommend 8GB. minimum 4GB)
 Follow the instructions below to set up your environment:
-- [LLM development environment document(word file)](https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/1-1.prepare/dev-env.docx)
+- [LLM development environment document(word file)](https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/1-1.prepare/dev-env.docx) [(PDF version)](https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/1-1.prepare/dev-env.pdf) [(English version)](https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/1-1.prepare/dev-env(english).pdf) 
 
 In refernce, this lesson will use the below 
 - **Colab Pro**: To run jupyter notebook, You need to create Colab account. For finetuning LLM, Colab Pro will be needed.
