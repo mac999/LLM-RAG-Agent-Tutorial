@@ -11,7 +11,8 @@ In reference, the subjects are like below.
 - [Multi-modal](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/3-3.multi-modal) like CLIP, LLaVA
 - Stable Diffusion and prompt engineering using [text to image, video, audio, sound, document (word, presentation) and code (app, game) tools](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/2-2.genai-prompt) 
 - LLM. [Train and Finetune](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/3-2.finetuning) for model like gemma, llama
-- [RAG](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/4-2.llm-rag) and [Langchain](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/4-1.langchain). [Vector DB](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/4-3.db) like [FAISS](https://engineering.fb.com/2017/03/29/data-infrastructure/faiss-a-library-for-efficient-similarity-search/), Chroma DB, Graph DB using Neo4j
+- [Vector RAG](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/4-2.llm-rag) and [Langchain](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/4-1.langchain). [Vector DB](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/4-3.db) like [FAISS](https://engineering.fb.com/2017/03/29/data-infrastructure/faiss-a-library-for-efficient-similarity-search/), Chroma DB
+- [Graph RAG](https://github.com/mac999/infra_ai_agent_tutorials/tree/main/08_AI_Agent/5_infra_graph_rag) using FalkorDB, Neo4j
 - [Chatbot](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/4-3.db) with [Ollama](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/4-5.ollama). Gradio and Streamlit for UX
 - [AI Agent](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/5-1.agent) and [MCP](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/5-2.llm-mcp-app)
 - LLM Internal Code Analysis like [Deepseek](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/2-4.deep-seek), Manus</br>
