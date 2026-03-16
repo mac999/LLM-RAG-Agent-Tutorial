@@ -1,3 +1,0 @@
-ifcopenshell
-neo4j
-python-dotenv
