@@ -1,0 +1,19 @@
+2025-11-29 20:34:56 - root - INFO - IFC to FalkorDB converter starting
+2025-11-29 20:34:56 - root - INFO - Log level: INFO
+2025-11-29 20:34:56 - root - INFO - Log file: f:\projects\graphrag\bim_graph_rag\logs\ifc_import_20251129_203456.log
+2025-11-29 20:34:56 - root - INFO - Environment variables loaded successfully
+2025-11-29 20:34:56 - root - INFO - Input directory: F:\projects\graphrag\bim_graph_rag\input
+2025-11-29 20:35:02 - src.falkordb_database - INFO - FalkorDB connection successful: localhost:6379/bim
+2025-11-29 20:35:08 - src.falkordb_graph_converter - INFO - Found 1 IFC files
+2025-11-29 20:35:08 - src.falkordb_graph_converter - INFO - Processing file: Duplex_A_20110907.ifc
+2025-11-29 20:35:08 - src.falkordb_graph_converter - INFO - Starting IFC file conversion: input\Duplex_A_20110907.ifc
+2025-11-29 20:35:08 - src.ifc_parser - INFO - Starting IFC file parsing: input\Duplex_A_20110907.ifc
+2025-11-29 20:35:08 - src.ifc_parser - INFO - IFC file parsing completed: input\Duplex_A_20110907.ifc
+2025-11-29 20:35:09 - src.ifc_parser - INFO - Extracted 295 elements in total.
+2025-11-29 20:35:10 - src.falkordb_graph_converter - INFO - Element nodes creation completed: 295/295
+2025-11-29 20:35:10 - src.ifc_parser - INFO - Extracted 1504 relationships in total.
+2025-11-29 20:35:15 - src.falkordb_graph_converter - INFO - Relationships creation completed: 23/1504
+2025-11-29 20:35:15 - src.falkordb_graph_converter - INFO - IFC file conversion completed: input\Duplex_A_20110907.ifc
+2025-11-29 20:35:15 - src.falkordb_graph_converter - INFO - File conversion successful: Duplex_A_20110907.ifc
+2025-11-29 20:35:22 - src.falkordb_database - INFO - FalkorDB connection closed
+2025-11-29 20:35:24 - root - INFO - All files converted successfully

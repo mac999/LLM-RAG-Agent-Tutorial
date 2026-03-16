@@ -1,0 +1,6 @@
+2025-10-09 19:23:05 - root - INFO - IFC to Neo4j converter starting
+2025-10-09 19:23:05 - root - INFO - Log level: INFO
+2025-10-09 19:23:05 - root - INFO - Log file: f:\projects\BIM_graph_rag\logs\ifc_import_20251009_192305.log
+2025-10-09 19:23:05 - root - INFO - Environment variables loaded successfully
+2025-10-09 19:23:05 - root - INFO - Input directory: F:\projects\BIM_graph_rag\input
+2025-10-09 19:23:07 - src.neo4j_database - INFO - Neo4j database connection successful: bolt://localhost:7687

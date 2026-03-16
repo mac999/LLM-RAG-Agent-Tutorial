@@ -1,0 +1,6 @@
+2025-11-29 20:32:30 - root - INFO - IFC to FalkorDB converter starting
+2025-11-29 20:32:30 - root - INFO - Log level: INFO
+2025-11-29 20:32:30 - root - INFO - Log file: f:\projects\graphrag\bim_graph_rag\logs\ifc_import_20251129_203230.log
+2025-11-29 20:32:30 - root - INFO - Environment variables loaded successfully
+2025-11-29 20:32:30 - root - INFO - Input directory: F:\projects\graphrag\bim_graph_rag\input
+2025-11-29 20:32:31 - src.falkordb_database - ERROR - FalkorDB connection failed: Protocol Error: b'HTTP/1.1 400 Bad Request'

@@ -1,0 +1,7 @@
+2025-11-29 20:12:27 - root - INFO - IFC to FalkorDB converter starting
+2025-11-29 20:12:27 - root - INFO - Log level: INFO
+2025-11-29 20:12:27 - root - INFO - Log file: f:\projects\graphrag\bim_graph_rag\logs\ifc_import_20251129_201227.log
+2025-11-29 20:12:27 - root - INFO - Environment variables loaded successfully
+2025-11-29 20:12:27 - root - INFO - Input directory: F:\projects\graphrag\bim_graph_rag\input
+2025-11-29 20:12:33 - src.falkordb_database - ERROR - FalkorDB connection failed: Error 10061 connecting to localhost:6379. 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다.
+2025-11-29 20:12:36 - root - ERROR - FalkorDB database connection failed

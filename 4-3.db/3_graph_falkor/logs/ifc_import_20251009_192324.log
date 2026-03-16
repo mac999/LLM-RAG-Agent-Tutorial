@@ -1,0 +1,21 @@
+2025-10-09 19:23:24 - root - INFO - IFC to Neo4j converter starting
+2025-10-09 19:23:24 - root - INFO - Log level: INFO
+2025-10-09 19:23:24 - root - INFO - Log file: f:\projects\BIM_graph_rag\logs\ifc_import_20251009_192324.log
+2025-10-09 19:23:24 - root - INFO - Environment variables loaded successfully
+2025-10-09 19:23:24 - root - INFO - Input directory: F:\projects\BIM_graph_rag\input
+2025-10-09 19:23:26 - src.neo4j_database - INFO - Neo4j database connection successful: bolt://localhost:7687
+2025-10-09 19:23:59 - src.neo4j_database - INFO - Database initialization completed
+2025-10-09 19:24:01 - root - INFO - Database initialization completed
+2025-10-09 19:24:31 - src.graph_converter - INFO - Found 1 IFC files in total.
+2025-10-09 19:24:32 - src.graph_converter - INFO - Starting IFC file conversion: input\Duplex_A_20110907.ifc
+2025-10-09 19:24:32 - src.ifc_parser - INFO - Starting IFC file parsing: input\Duplex_A_20110907.ifc
+2025-10-09 19:24:32 - src.ifc_parser - INFO - IFC file parsing completed: input\Duplex_A_20110907.ifc
+2025-10-09 19:24:33 - src.ifc_parser - INFO - Extracted 295 elements in total.
+2025-10-09 19:24:38 - src.graph_converter - INFO - Element nodes creation completed: 295/295
+2025-10-09 19:24:38 - src.ifc_parser - INFO - Extracted 1504 relationships in total.
+2025-10-09 19:24:45 - src.graph_converter - INFO - Relationships creation completed: 1503/1504
+2025-10-09 19:24:45 - src.graph_converter - INFO - IFC file conversion completed: input\Duplex_A_20110907.ifc
+2025-10-09 19:24:46 - src.graph_converter - INFO - Conversion successful: Duplex_A_20110907.ifc
+2025-10-09 19:24:48 - src.graph_converter - INFO - Conversion completed - successful: 1/1
+2025-10-09 19:24:52 - src.neo4j_database - INFO - Neo4j database connection closed
+2025-10-09 19:24:53 - root - INFO - All files converted successfully
