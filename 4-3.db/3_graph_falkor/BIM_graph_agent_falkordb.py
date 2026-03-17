@@ -532,10 +532,10 @@ class BIMGraphAgent:
 		print("BIM Graph Agent - AI-Powered BIM Data Query System (FalkorDB)")
 		print("Ask questions about your BIM data in natural language!")
 		print("Examples:")
-		print("- How many walls are in the building?")
-		print("- Show me all doors in the project")
 		print("- What IFC files are loaded?")
-		print("- Find elements on the ground floor")
+		print("- List all properties of space A204")
+		print("- List all elements contained in A204 space")
+		print("- How many IfcWallStandardCase?")
 		print("\nType 'quit' or 'exit' to stop")
 		
 		while True:

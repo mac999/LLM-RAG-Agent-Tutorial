@@ -48,8 +48,11 @@ def parse_arguments():
 		formatter_class=argparse.RawDescriptionHelpFormatter,
 		epilog=__doc__
 	)
-	parser.add_argument('--input-dir', type=str, default='input',
-					  help='Input directory containing IFC files (default: ./input)')
+
+	cur_module_path = os.path.abspath(__file__)
+	ifc_input_folder = os.path.join(os.path.dirname(cur_module_path), 'input')
+	parser.add_argument('--input-dir', type=str, default=ifc_input_folder,
+					  help=f'Input directory containing IFC files (default: {ifc_input_folder})')
 	parser.add_argument('--clear-db', action='store_true',
 					  help='Clear all existing data in graph before conversion')
 	parser.add_argument('--force-clear', action='store_true',
