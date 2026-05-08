@@ -1,1 +1,1 @@
-docker run -p 6379:6379 -p 3000:3000 -it --rm -v ./data:/var/lib/falkordb/data falkordb/falkordb
+docker run -p 6379:6379 -p 3000:3000 -it --rm -v ./data:/var/lib/falkordb/data -e ENCRYPTION_KEY=0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef falkordb/falkordb
