@@ -1,0 +1,1 @@
+streamlit run .\BIM_graph_agent_web_falkordb.py
