@@ -57,6 +57,12 @@ BIM graph agent with data processing system that converts IFC files to Neo4j and
    - `streamlit` - Web interface framework
 4. Configure environment variables in `.env` file:
    ```
+   FALKORDB_HOST=localhost
+   FALKORDB_PORT=6379
+   FALKORDB_GRAPH=bim
+   FALKORDB_USERNAME=default
+   FALKORDB_PASSWORD=
+
    NEO4J_URI=bolt://localhost:7687
    NEO4J_USER=neo4j
    NEO4J_PASSWORD=your_password
@@ -73,11 +79,16 @@ BIM graph agent with data processing system that converts IFC files to Neo4j and
    ollama serve
    ```
 
+6. Run FalkorDB docker:
+   ```bash
+   docker run -p 6379:6379 -p 3000:3000 -it --rm -v ./data:/var/lib/falkordb/data -e ENCRYPTION_KEY=0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef falkordb/falkordb
+   ```
+
 ## Usage
 
-### Create elements graph databsae in Neo4j from input IFC files
+### Create elements graph databsae from input IFC files
 ```bash
-python import_ifc.py [options]
+python import_ifc_to_falkordb.py [options]
 
 Options:
   --input-dir DIR     Input directory containing IFC files (default: ./input)
@@ -91,12 +102,12 @@ Options:
 
 Convert all IFC files in the input directory:
 ```bash
-python import_ifc.py --input-dir ./input --stats
+python import_ifc_to_falkordb.py --input-dir ./input --stats
 ```
 
 Clear database and convert with debug logging:
 ```bash
-python import_ifc.py --clear-db --log-level DEBUG --validate
+python import_ifc_to_falkordb.py --clear-db --log-level DEBUG --validate
 ```
 
 ### BIM Graph Agent (AI Expert System)
@@ -105,14 +116,14 @@ python import_ifc.py --clear-db --log-level DEBUG --validate
 
 Launch the AI-powered natural language console interface:
 ```bash
-python BIM_graph_agent.py
+python BIM_graph_agent_falkordb.py
 ```
 
 #### Web Interface
 
 Launch the Streamlit web application for a user-friendly interface:
 ```bash
-streamlit run BIM_graph_agent_web.py
+streamlit run BIM_graph_agent_web_falkordb.py
 ```
 
 The web app will automatically open in your browser at `http://localhost:8501`
@@ -170,8 +181,8 @@ BIM_graph_rag/
 ├── logs/                       # Log files directory
 ├── requirements.txt            # Required Python packages
 ├── .env                        # Environment configuration
-├── import_ifc.py              # Main CLI application
-├── BIM_graph_expert.py        # BIM Graph Agent (AI expert system)
+├── import_ifc_to_falkordb.py              # Main CLI application
+├── BIM_graph_expert_falkorrdb.py        # BIM Graph Agent (AI expert system)
 └── README.md                  # This file
 ```
 
