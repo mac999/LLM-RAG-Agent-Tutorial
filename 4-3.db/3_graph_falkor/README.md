@@ -433,10 +433,14 @@ CREATE TABLE ifc_elements (
    - Process files individually if needed
 
 4. **Slow AI Response Times**
-   - Use Highend GPU and LLM model like GLM, qwen etc   
    - Consider switching to lighter models (qwen2.5-coder:3b)
    - Optimize Ollama configuration settings
    - Consider vLLM for production deployments
+
+5. **Poor inference performance**
+   - Use Highend GPU
+   - Large parameters LLM model like GLM, qwen etc
+   - Finetuning LLM   
 
 ### Log Files
 Log files are automatically created in the `logs/` directory with timestamps for troubleshooting.
