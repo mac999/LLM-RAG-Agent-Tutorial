@@ -1,6 +1,6 @@
 # BIM Graph Agent
 
-BIM graph agent with data processing system that converts IFC files to Neo4j and [FalkorDB](https://daddynkidsmakers.blogspot.com/2025/11/falkordb-llm-bim.html) graph database and provides AI-powered natural language querying capabilities. This project is example and demonstration to show how to use graph database like neo4j as the viewpoint of RAG and AI Agent development. If you're consider the lightweight graph database, use [FalkorDB](https://daddynkidsmakers.blogspot.com/2025/11/falkordb-llm-bim.html).
+BIM graph agent with data processing system that converts IFC files to [FalkorDB](https://daddynkidsmakers.blogspot.com/2025/11/falkordb-llm-bim.html) graph database and provides AI-powered natural language querying capabilities. This project is example and demonstration to show how to use graph database like neo4j as the viewpoint of RAG and AI Agent development. If you're consider the lightweight graph database, use [FalkorDB](https://daddynkidsmakers.blogspot.com/2025/11/falkordb-llm-bim.html).
 
 <p align="center">
 <img src="./doc/img2.jpg" width="750"> </img></br>
@@ -14,7 +14,7 @@ BIM graph agent with data processing system that converts IFC files to Neo4j and
 ## Features
 
 ### Core System
-- **IFC to Graph Conversion**: Automatically processes IFC files and converts them to Neo4j graph database
+- **IFC to Graph Conversion**: Automatically processes IFC files and converts them to graph database
 - **Data Integrity**: Accurately converts IFC elements and relationships without data loss
 - **File Metadata Management**: Stores and links IFC file information with graph structure
 - **Guardrail**: Hallucination Guardrail
@@ -28,7 +28,7 @@ BIM graph agent with data processing system that converts IFC files to Neo4j and
 
 ### System Requirements
 - Python 3.9 or higher
-- Neo4j database (version 4.0 or higher)
+- Falkor database
 - 8GB RAM minimum (16GB recommended for large IFC files)
 - 2GB free disk space for database storage
 
@@ -39,24 +39,18 @@ BIM graph agent with data processing system that converts IFC files to Neo4j and
 - Internet connection for initial model download
 
 ## Installation
-1. Create elements database in Neo4j like below
-<p align="center">
-   <img src="https://github.com/mac999/BIM_graph_agent/blob/main/doc/db1.jpg" height="300"></img>
-</p>
-
-2. Clone or download this project
-3. Install required packages:
+1. Clone or download this project
+2. Install required packages:
    ```bash
    pip install -r requirements.txt
    ```
    
    Required packages include:
    - `ifcopenshell` - IFC file parsing
-   - `neo4j` - Neo4j database driver
    - `langchain` ecosystem - AI framework
    - `ollama` - Local LLM integration
    - `streamlit` - Web interface framework
-4. Configure environment variables in `.env` file:
+3. Configure environment variables in `.env` file (neo4j is optional):
    ```
    FALKORDB_HOST=localhost
    FALKORDB_PORT=6379
@@ -69,7 +63,7 @@ BIM graph agent with data processing system that converts IFC files to Neo4j and
    NEO4J_PASSWORD=your_password
    NEO4J_DATABASE=elements
    ```
-5. Install and setup Ollama for BIM Graph Agent:
+4. Install and setup Ollama for BIM Graph Agent:
    ```bash
    # Install Ollama from https://ollama.ai
    
@@ -80,7 +74,7 @@ BIM graph agent with data processing system that converts IFC files to Neo4j and
    ollama serve
    ```
 
-6. Run FalkorDB docker:
+5. Run FalkorDB docker:
    ```bash
    docker run -p 6379:6379 -p 3000:3000 -it --rm -v ./data:/var/lib/falkordb/data -e ENCRYPTION_KEY=0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef falkordb/falkordb
    ```
