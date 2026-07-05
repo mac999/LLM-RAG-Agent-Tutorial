@@ -3,12 +3,12 @@
 BIM graph agent with data processing system that converts IFC files to Neo4j and [FalkorDB](https://daddynkidsmakers.blogspot.com/2025/11/falkordb-llm-bim.html) graph database and provides AI-powered natural language querying capabilities. This project is example and demonstration to show how to use graph database like neo4j as the viewpoint of RAG and AI Agent development. If you're consider the lightweight graph database, use [FalkorDB](https://daddynkidsmakers.blogspot.com/2025/11/falkordb-llm-bim.html).
 
 <p align="center">
-<img src="https://github.com/mac999/BIM_graph_agent/blob/main/doc/img2.jpg" width="750"> </img></br>
-<img src="https://github.com/mac999/BIM_graph_agent/blob/main/doc/img1.jpg" height="200"> </img>
-<img src="https://github.com/mac999/BIM_graph_agent/blob/main/doc/img3.jpg" height="200"> </img></br>
-<img src="https://github.com/mac999/BIM_graph_agent/blob/main/doc/img9.jpg" height="255"> </img>
-<img src="https://github.com/mac999/BIM_graph_agent/blob/main/doc/img7.jpg" height="255"> </img>
-<img src="https://github.com/mac999/BIM_graph_agent/blob/main/doc/img8.jpg" height="255"> </img>
+<img src="./doc/img2.jpg" width="750"> </img></br>
+<img src="./doc/img1.jpg" height="200"> </img>
+<img src="./doc/img3.jpg" height="200"> </img></br>
+<img src="./doc/img9.jpg" height="255"> </img>
+<img src="./doc/img7.jpg" height="255"> </img>
+<img src="./doc/img8.jpg" height="255"> </img>
 </p>
 
 ## Features
@@ -17,6 +17,7 @@ BIM graph agent with data processing system that converts IFC files to Neo4j and
 - **IFC to Graph Conversion**: Automatically processes IFC files and converts them to Neo4j graph database
 - **Data Integrity**: Accurately converts IFC elements and relationships without data loss
 - **File Metadata Management**: Stores and links IFC file information with graph structure
+- **Guardrail**: Hallucination Guardrail
 
 ### BIM Graph Agent (AI-Powered Expert System)
 - **Natural Language Querying**: Ask questions about BIM data in plain English or Korean
@@ -117,6 +118,10 @@ python import_ifc_to_falkordb.py --clear-db --log-level DEBUG --validate
 Launch the AI-powered natural language console interface:
 ```bash
 python BIM_graph_agent_falkordb.py
+```
+or launch Agent CLI with guardrail to protect hallucination.
+```bash
+python BIM_graph_agent_falkordb_guardrail.py
 ```
 
 #### Web Interface
@@ -317,20 +322,6 @@ pip install optimum[onnxruntime-gpu]
 - vLLM tensor parallelism support
 - 80-90% performance improvement potential
 
-### Performance Improvement Roadmap
-
-| Phase | Duration | Methods | Expected Improvement | Cost |
-|-------|----------|---------|---------------------|------|
-| **Phase 1** | 1-2 days | llama-cpp-python + Lightweight models | 50-60% (10s → 4-5s) | Free |
-| **Phase 2** | 1 week | vLLM or Optimum integration | 70-80% (10s → 2-3s) | Free |
-| **Phase 3** | 1 month | Multi-GPU + Model fine-tuning | 85% (10s → 1.5s) | $1000+ |
-
-### Recommended Quick Wins
-
-1. **Switch to llama-cpp-python** - Direct model loading, 50% speed boost
-2. **Use qwen2.5-coder:3b or quantized models** - Immediate memory and speed improvement
-3. **Optimize system settings** - Neo4j indexing and Ollama configuration
-
 ### Library Comparison
 
 | Library | Setup Complexity | Performance Gain | Memory Savings | Stability |
@@ -423,73 +414,6 @@ CREATE TABLE ifc_elements (
 - **Horizontal Scaling**: Large datasets across multiple servers
 - **JSON-native Operations**: Direct property manipulation
 
-### Performance Comparison
-
-| Query Type | Neo4j | MySQL | MongoDB | PostgreSQL |
-|------------|-------|-------|---------|------------|
-| **1-2 hop relationships** | 10ms | 5ms | 8ms | 6ms |
-| **10+ hop traversals** | 50ms | 10s+ | N/A | 15s+ |
-| **Property aggregations** | 100ms | 20ms | 30ms | 25ms |
-| **Full-text search** | Limited | Good | Excellent | Excellent |
-| **Complex analytics** | Limited | Excellent | Good | Excellent |
-
-### Selection Decision Matrix
-
-#### Choose **Neo4j** when:
-- Complex relationship analysis is core business requirement
-- 10+ hop graph traversals are frequent
-- Real-time pathfinding is essential
-- Budget allows for enterprise licensing ($50K+)
-- Team has graph database expertise
-
-#### Choose **MySQL/PostgreSQL** when:
-- Property-based queries dominate (90% of BIM use cases)
-- Cost optimization is priority
-- Standard SQL expertise is available
-- Reporting and analytics are important
-- Proven stability is required
-
-#### Choose **MongoDB** when:
-- Document structure varies significantly
-- Horizontal scaling is needed
-- JSON manipulation is frequent
-- Schema flexibility is important
-
-#### Choose **Hybrid Approach** when:
-```python
-# Smart routing based on query complexity
-class HybridBIMAgent:
-    def process_query(self, query):
-        if self.requires_deep_traversal(query):
-            return self.neo4j_engine.process(query)  # Complex relationships
-        else:
-            return self.mysql_engine.process(query)  # Standard queries
-```
-
-### Recommended Architecture
-
-**For BIM Projects:**
-
-1. **Education/Demo**: Neo4j Community (free) - Good for learning graph concepts
-2. **Small Projects**: MySQL + JSON properties - Cost-effective and sufficient
-3. **Medium Projects**: PostgreSQL + specialized graph queries when needed
-4. **Large Enterprise**: Hybrid approach - MySQL primary + Neo4j for complex analysis
-5. **Research Projects**: Neo4j Enterprise - Advanced graph analytics capabilities
-
-### Migration Considerations
-
-**From Neo4j to SQL:**
-- 5-10x faster development for standard queries
-- 80% cost reduction in licensing and operations
-- Easier team onboarding and maintenance
-- Better integration with existing tools
-
-**From SQL to Neo4j:**
-- Significant performance gain for relationship queries
-- Better modeling of complex interconnections
-- Enhanced analytical capabilities
-- Higher operational overhead
-
 ## Troubleshooting
 
 ### Common Issues
@@ -509,6 +433,7 @@ class HybridBIMAgent:
    - Process files individually if needed
 
 4. **Slow AI Response Times**
+   - Use Highend GPU and LLM model like GLM, qwen etc   
    - Consider switching to lighter models (qwen2.5-coder:3b)
    - Optimize Ollama configuration settings
    - Consider vLLM for production deployments
